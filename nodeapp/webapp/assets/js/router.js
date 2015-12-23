@@ -1,0 +1,19 @@
+app.config(function($routeProvider){
+	$routeProvider.when("/",{
+		templateUrl:"partials/home.html",
+		controller:"HomeController",
+	}).when("/admin",{
+		templateUrl:"partials/dash.html",
+		controller:"DashController",
+	}).when("/contact",{
+		templateUrl:"partials/contact.html",
+		controller:"ContactController",
+	}).when("/course",{
+		templateUrl:"partials/course.html"
+	}).when("/about",{
+		templateUrl:"partials/about.html"
+	}).
+      otherwise({
+        redirectTo: "/"
+      });
+});
